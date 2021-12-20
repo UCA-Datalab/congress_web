@@ -10,7 +10,7 @@ header,
 }
 
 #intro {
-    background: url('/static/images/landing-image-4.jpg') no-repeat center center fixed;
+    background: url('../images/puente.jpg') no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
