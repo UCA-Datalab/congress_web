@@ -121,3 +121,10 @@ ul {
 .container{
     max-width: 1850px !important;
 }
+
+.max-width-speakers{
+    max-width: 1250px !important;
+}
+.rounded-image{
+    border-radius: 35% !important;
+}
