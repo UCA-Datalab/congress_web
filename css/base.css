@@ -114,7 +114,7 @@ html {
     font-size: large;
 }
 
-ul {
+.ul-center {
     text-align: center;
     list-style: inside;
   }
@@ -127,4 +127,11 @@ ul {
 }
 .rounded-image{
     border-radius: 35% !important;
+}
+
+#conference-pic{
+    width: auto;
+    height: auto;
+    max-width: 100%;
+
 }
