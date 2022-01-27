@@ -30,6 +30,9 @@
     <!-- MDB core JavaScript -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js"></script>
 
+    <!-- SMTP library -->
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+
     <title>International Conference on Orthogonal Polynomials</title>
 </head>
 
@@ -320,7 +323,7 @@
 
         </section>
 
-        <!--registration
+        
         <hr class="my-5">
         <section id="registration" class="text-center">
             <h2 class="mb-5 font-weight-bold text-center section-title">Registration</h2>
@@ -328,14 +331,14 @@
             <div class="row d-flex justify-content-center mb-4">
 
                 <div class="col-md-8 text-center">
-                    <p class="darkgrey-text">
-                        Registration for the conference will open on <strong>15th, 2022</strong> .
-                    </p>
+                    <form method="post" id="registration"> 
+                        Email: <input type="text" name="email">
+                        <input type="submit" value="Register">
+                    </form>
                     
                 </div>
             </div>
         </section>
-        -->
 
         <!--call for abstracts
         <hr class="my-5">
