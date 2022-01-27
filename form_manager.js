@@ -21,14 +21,12 @@ function ValidateEmail(input) {
 
 }
 
-const form = document.getElementById('registration');
-
-form.addEventListener('submit', (event) => {
-    email = form.elements["email"]
+function processEmail(form) {
+    email = form.email
 
     // stop form submission
     //if (!ValidateEmail(email))
     //event.preventDefault();
 
-    form.submit()
-});
+    console.log(email)
+}
