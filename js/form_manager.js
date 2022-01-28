@@ -4,44 +4,50 @@ function createBody(surname) {
     return body;
 }
 
-function sendEmail(email, surname) {
-    var senderEmail = "smartshipping.contact@gmail.com"
+document.addEventListener("submit", (e) => {
 
+    const formElement = document.getElementById('registration-form');
+    // Store reference to form to make later code easier to read
+    form = e.target
+    //console.log(form)
+    var email = form.email.value;
+    var surname = form.surname.value;
+    //console.log(createBody(surname))
+    //console.log(email, name, surname, institution)
+
+    //Send reception email to the user
     Email.send({
         Host: "smtp.gmail.com",
-        Username: senderEmail,
-        Password: "smartshipping123",
+        Username: "smartshipping.contact@gmail.com",
+        Password: "zvaememugzmdlfqr",
         To: email,
-        From: senderEmail,
+        From: "smartshipping.contact@gmail.com",
         Subject: "Pre-registration for Intl Conf on Orthogonal Polynomials (Cádiz, 21-23 April)",
-        Body: createBody(surname),
-
+        Body: createBody(surname)
     }).then(
         message => console.log(message)
     );
-}
 
-function processEmail(form) {
-    var email = form.email.value;
-    var name = form.name.value;
-    var surname = form.surname.value;
-    var institution = form.institution.value;
+    //Prevent the form from being sent (page realoaded)
+    e.preventDefault();
 
-    if (email == "" || name == "" || surname == "" || institution == "") {
-        alert("* must be filled out.");
-        return false;
-    }
 
-    // stop form submission
-    //if (!ValidateEmail(email))
-    //event.preventDefault();
+    //Url to google sheets api
+    const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxIyyUwkzHVpAW99GFQ1Jh7Ajc-GQoyOO1EiRAC9Q-VRq3aQZGhpSFQm6xnpn46LAjA/exec'
+    //Send the data to google sheets
+    fetch(SCRIPT_URL,
+        {
+            method: 'POST',
+            body: new FormData(form)
+        })
+        .then(response => console.log('Success!', response))
+        .catch(error => console.error('Error!', error.message))
 
-    console.log(email);
-    console.log(name);
-    console.log(surname);
-    console.log(institution);
 
-    sendEmail(email, surname);
+    //Open the registration payment on a new windows
+    window.open("https://www.elcorteingles.es/", '_blank').focus();
 
-    return true;
-}
+
+});
+
+
