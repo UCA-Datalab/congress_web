@@ -6,7 +6,6 @@ function createBody(surname) {
 
 document.addEventListener("submit", (e) => {
 
-    const formElement = document.getElementById('registration-form');
     // Store reference to form to make later code easier to read
     form = e.target
     //console.log(form)
