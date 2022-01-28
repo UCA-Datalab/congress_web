@@ -327,14 +327,14 @@
             <h2 class="mb-5 font-weight-bold text-center section-title">Registration</h2>
 
             <div class="row d-flex justify-content-center mb-4">
-
+ 
                 <div class="col-md-8">
                     <p>
                         Please fill in the form below if you are interested in participating in the conference, letting us know if you would like to present a talk or poster. There is only a limited number of slots for talks, but this information will help us know in advance an estimated number of participants.
                         The deadline for submission of abstracts is March 1st, and acceptance of proposed contributions will be communicated on March 15th. 
                     </p>
-                    <form method="post" id="registration-form" action="#registration" onsubmit="return processEmail(this);">
-                        <div class="form-group">
+                    <form method="post" id="registration-form" >
+                        <div class="form-group"> 
                             <label for="name-label">Name (*)</label>
                             <input type="text" class="form-control" name="name" placeholder="Your name" required>
                         </div>
@@ -344,8 +344,8 @@
                         </div>
                         <div class="form-group">
                             <label for="email-label">E-mail (*)</label>
-                            <input type="text" class="form-control" name="email" placeholder="name@example.com" required>
-                        </div>
+                            <input type="email" class="form-control" name="email" placeholder="name@example.com" required>
+                        </div> 
                         <div class="form-group">
                             <label for="institution-label">Institution (*)</label>
                             <input type="text" class="form-control" name="institution" placeholder="Your institution" required>
@@ -355,7 +355,7 @@
 
                         <div class="form-group">
                             <label for="present-label">Do you want to present a contribution?</label>
-                            <select id="present" name="present" size="1" class="form-control">
+                            <select id="present" name="presents" size="1" class="form-control">
                                 <option value="no" selected>No</option>
                                 <option value="talk">A talk</option>
                                 <option value="poster">A poster</option>
@@ -384,8 +384,7 @@
                         An extra 50 EUR will be charged on late registrations after Apr 1st. <br>
                         </p>
 
-
-                        <input type="submit" value="Register">
+                        <input type="submit"  value="Register">
                     </form>
                     
                 </div>
