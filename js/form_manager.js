@@ -1,5 +1,13 @@
 function createBody(surname) {
-    var body = "Dear Prof. " + surname + ",\n\nThank you for pre-registering for the International Conference on Orthogonal Polynomials.\nIf you submitted a proposed contribution, final acceptance will be communicated on March 15th. Please remember to complete your registration with the payment of the registration fee at the following website: (enlace a web de El Corte Inglés).\nWe are looking forward to seeing you in Cádiz.\n\nThe Organizing Committee";
+    var body = `<p>Dear Prof. ` + surname + `</p>
+    <p>Thank you for pre-registering for the International Conference on Orthogonal Polynomials.</p>
+    <p>
+        If you submitted a proposed contribution, final acceptance will be communicated on March 15th. Please remember to
+        complete your registration with the payment of the registration fee at the following website: <a
+            class="link-corte-ingles">(enlace a web de El Corte Inglés)</a>.
+    </p>
+    <p>We are looking forward to seeing you in Cádiz.</p>
+    <p>The Organizing Committee</p>`;
 
     return body;
 }
@@ -17,10 +25,10 @@ document.addEventListener("submit", (e) => {
     //Send reception email to the user
     Email.send({
         Host: "smtp.gmail.com",
-        Username: "smartshipping.contact@gmail.com",
-        Password: "zvaememugzmdlfqr",
+        Username: "marcellanfest@gmail.com",
+        Password: "exactewqvhqfbfsp",
         To: email,
-        From: "smartshipping.contact@gmail.com",
+        From: "marcellanfest@gmail.com",
         Subject: "Pre-registration for Intl Conf on Orthogonal Polynomials (Cádiz, 21-23 April)",
         Body: createBody(surname)
     }).then(
@@ -44,6 +52,7 @@ document.addEventListener("submit", (e) => {
 
 
     //Open the registration payment on a new windows
+    // TODO: Cambiar enlace
     window.open("https://www.elcorteingles.es/", '_blank').focus();
 
 
