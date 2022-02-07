@@ -4,7 +4,8 @@ function createBody(surname) {
     <p>
         If you submitted a proposed contribution, final acceptance will be communicated on March 15th. Please remember to
         complete your registration with the payment of the registration fee at the following website: <a
-            class="link-corte-ingles">(enlace a web de El Corte Inglés)</a>.
+            class="link-corte-ingles" href="http://sevilla-en.congresoseci.com/orthogonalpolynomials/index"> registration portal </a>.
+
     </p>
     <p>We are looking forward to seeing you in Cádiz.</p>
     <p>The Organizing Committee</p>`;
@@ -53,7 +54,7 @@ document.addEventListener("submit", (e) => {
 
     //Open the registration payment on a new windows
     // TODO: Cambiar enlace
-    window.open("https://www.elcorteingles.es/", '_blank').focus();
+    window.open("http://sevilla-en.congresoseci.com/orthogonalpolynomials/index", '_blank').focus();
 
 
 });
